@@ -20,12 +20,12 @@ Setting up a SOC lab using Azure, creating a virtual machine (VM) as a Honeypot,
 * For image -> windows 10 pro
 * select size -> Standard ds2 version
 * Create a Username and password
-* Select Disk
+* Select Disk -> Premium SSD
 * Select Vnet for networking
 * Enable delete public IP when VM is deleted
 * Disable Boot Diagnostics
 * Create
   
-* 
-* 
+
+ 
 
