@@ -25,6 +25,34 @@ Setting up a SOC lab using Azure, creating a virtual machine (VM) as a Honeypot,
 * Enable delete public IP when VM is deleted
 * Disable Boot Diagnostics
 * Create
+## Step 4: Opening the Firewall of VM
+* Go to resource group and select the firewall *nsg*
+* Delete the RDP rule in the Inbound rule
+* Settings -> Inbound Security rules -> Add
+* Set destination port to any
+* Name the rule (Danger-AllowAnyCustomInbound)
+## Step 5: Power up the VM
+* Copy the Public IP of VM
+* Paste it on the Remote Desktop Connection on your host machine
+* Log in using the username and password created
+
+    ## Turn off the Windows Firewall on VM
+     * Go to Windows Firewall
+     * Click on Windows Defender Firewall Properties
+     * Turn off all the profiles
+       
+  Ping the VM from the local computer to check the connectivity **ping <Public IP of VM>**
+  
+## Step 6: Viewing Raw Logs On Virtual Machine
+* Try to log in with different accounts and create multiple failed logins
+* Go to VM and open Event Viewer to view local logs
+* Windows Logs-> Security Events
+* You can notice a bunch of security events of failed login attempts with event code **4625**
+
+ We can now forward these logs into Azure Sentinel by creating a **Log Analytics Workspace** and connecting it to the SEIM Sentinel
+## Step 7: Creating Log Analytics Workspace (our Log Repository)
+* 
+ 
   
 
  
