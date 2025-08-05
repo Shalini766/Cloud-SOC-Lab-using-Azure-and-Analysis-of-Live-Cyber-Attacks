@@ -36,10 +36,10 @@ Setting up a SOC lab using Azure, creating a virtual machine (VM) as a Honeypot,
 * Paste it on the Remote Desktop Connection on your host machine
 * Log in using the username and password created
 
-    ## Turn off the Windows Firewall on VM
-     * Go to Windows Firewall
-     * Click on Windows Defender Firewall Properties
-     * Turn off all the profiles
+     ### Turn off the Windows Firewall on VM
+        * Go to Windows Firewall
+        * Click on Windows Defender Firewall Properties
+        * Turn off all the profiles
        
   Ping the VM from the local computer to check the connectivity **ping <Public IP of VM>**
   
@@ -51,7 +51,16 @@ Setting up a SOC lab using Azure, creating a virtual machine (VM) as a Honeypot,
 
  We can now forward these logs into Azure Sentinel by creating a **Log Analytics Workspace** and connecting it to the SEIM Sentinel
 ## Step 7: Creating Log Analytics Workspace (our Log Repository)
-* 
+* Click on Create Log Analytics Workspace
+* Specify the Resource Group
+* Name the Log Analytics and Region
+* Review and Create
+  
+   ### Adding Microsoft Sentinel to Log Analytics Workspace
+     * Go to Sentinel
+     * Click on Add Sentinel to Workspace
+     * Select the created workspace and create
+  
  
   
 
