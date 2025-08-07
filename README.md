@@ -60,9 +60,42 @@ Setting up a SOC lab using Azure, creating a virtual machine (VM) as a Honeypot,
      * Go to Sentinel
      * Click on Add Sentinel to Workspace
      * Select the created workspace and create
+       
+## Step 8: Connecting VM to Log Analytics Workspace
+* Go to Microsoft Sentinel
+* Click on Log Analytics instance
+* Click on Content Management -> Content Hub
+* Search for **Windows Security Events**
+* Install
   
- 
+* Go to Windows Security Events -> Manage
+* Click on **Windows Security Events via AMA**
+* Open Connector Page
+* Create Data Collection Rule
+* Name the rule (DCR-Windows)
+* Specify Resource group and Region
+* Select our Virtual Machine (CORP-NET)
+* Create
   
+The **AzureMonitorWindowsAgent** should reflect on the VM page
+
+It should take some time for the logs to be loaded onto the Log Analytics Workspace.
+
+## Step 9: Querying our Log Repository with KQL
+
+
+<img width="1301" height="575" alt="az17" src="https://github.com/user-attachments/assets/f51d0807-e3b5-49e2-85db-eb3f35e4905a" />
+
+<img width="1286" height="562" alt="az19" src="https://github.com/user-attachments/assets/9301d2fe-2147-4a77-a59d-ea4fbaaeb252" />
+
+<img width="1267" height="529" alt="az21" src="https://github.com/user-attachments/assets/0d520b4b-28b2-456b-8c3c-be49d7957830" />
+
+## Step 10: Uploading our Geolocation data into SIEM Sentinel
+
+
+
+
+
 
  
 
