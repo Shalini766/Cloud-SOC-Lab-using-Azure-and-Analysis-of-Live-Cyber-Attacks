@@ -86,9 +86,12 @@ It should take some time for the logs to be loaded onto the Log Analytics Worksp
 
 <img width="1301" height="575" alt="az17" src="https://github.com/user-attachments/assets/f51d0807-e3b5-49e2-85db-eb3f35e4905a" />
 
+
 <img width="1286" height="562" alt="az19" src="https://github.com/user-attachments/assets/9301d2fe-2147-4a77-a59d-ea4fbaaeb252" />
 
+
 <img width="1267" height="529" alt="az21" src="https://github.com/user-attachments/assets/0d520b4b-28b2-456b-8c3c-be49d7957830" />
+
 
 ## Step 10: Uploading our Geolocation data into SIEM Sentinel
 
