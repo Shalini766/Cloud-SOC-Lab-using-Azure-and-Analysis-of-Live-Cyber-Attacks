@@ -95,6 +95,10 @@ It should take some time for the logs to be loaded onto the Log Analytics Worksp
 
 ## Step 10: Uploading our Geolocation data into SIEM Sentinel
 
+### Step 11: Inspecting our enriched logs to see where the attacker is from
+
+### Step 12: Creating the attack map
+
 
 
 
