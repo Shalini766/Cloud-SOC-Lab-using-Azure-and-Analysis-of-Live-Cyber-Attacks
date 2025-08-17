@@ -101,13 +101,34 @@ It should take some time for the logs to be loaded onto the Log Analytics Worksp
 
 ### Step 11: Inspecting our enriched logs to see where the attacker is from
 * Go to Log Analytics
-* 
+* Start querying with KQL to see the failed logins, attacker's name, location, IP address, etc
+
+  let GeoIPDB_FULL = _GetWatchlist("geoip");
+let WindowsEvents = SecurityEvent
+    | where IpAddress == <attacker IP address>
+    | where EventID == 4625
+    | order by TimeGenerated desc
+    | evaluate ipv4_lookup(GeoIPDB_FULL, IpAddress, network);
+WindowsEvents
+
+
+  
+**To see failed user logins**
+<img width="1267" height="529" alt="az21" src="https://github.com/user-attachments/assets/d5a915a1-bf93-425b-8952-3938667abc98" />
+
+<img width="705" height="346" alt="az25" src="https://github.com/user-attachments/assets/e5196df0-7ad1-4ddf-bdc8-7ff6e844e794" />
+
 
 ### Step 12: Creating the attack map
+* Go to Sentinel -> Instance -> Workbook -> Add Workbook
+* Remove the prepopulated elements
+* Add Query -> Advanced Editor -> Paste the map.json script
+  
+   https://drive.google.com/file/d/1ErlVEK5cQjpGyOcu4T02xYy7F31dWuir/view?usp=drive_link
 
+* Now you can see the map and the attack locations from all over the world in real time.
 
-
-
+<img width="734" height="318" alt="az26" src="https://github.com/user-attachments/assets/23ca536b-477c-43f3-a278-21bacde711d8" />
 
 
  
