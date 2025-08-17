@@ -94,8 +94,14 @@ It should take some time for the logs to be loaded onto the Log Analytics Worksp
 
 
 ## Step 10: Uploading our Geolocation data into SIEM Sentinel
+* Go to Sentinel instances and click on Watchlist
+* Create a New Watchlist -> Name -> geoip -> Next -> Source
+* Upload any summarized geo locations in CSV format, which contains country, latitude, longitude, and a random attacker's IP address.
+* Search Key -> Network -> Create
 
 ### Step 11: Inspecting our enriched logs to see where the attacker is from
+* Go to Log Analytics
+* 
 
 ### Step 12: Creating the attack map
 
